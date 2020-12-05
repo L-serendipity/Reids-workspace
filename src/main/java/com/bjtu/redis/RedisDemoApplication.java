@@ -22,40 +22,8 @@ public class RedisDemoApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(RedisDemoApplication.class, args);
-        Scanner sc=new Scanner(System.in);
-        String str;
-        do{
-            System.out.println("请输入要执行的操作：(1或2),0退出");
-            System.out.println("1.1num");
-            System.out.println("2.freq");
-            str=sc.nextLine();
-            if(str.equals("1")){
-                System.out.println("111");
-            }
-            else if(str.equals("2")){
-                function("2");
-            }
-            else if(str.equals("0"))
-                System.exit(1);
-        }
-        while(!str.equals("0"));
     }
 
-    public static void function(String num){
-        String path=RedisDemoApplication.class.getClassLoader().getResource("counter.json").getPath();
-        String s=readJsonFile(path);
-        JSONObject jobj= JSON.parseObject(s);
-        JSONArray counters=jobj.getJSONArray("counter");
-        for(int i=1;i<counters.size();i++){
-            JSONObject key=(JSONObject)counters.get(i);
-            String counterName=(String)key.get("counterName");
-            String counterIndex=(String)key.get("counterIndex");
-            System.out.println(counterIndex);
-            String type=(String)key.get("type");
-            String keyFields=(String)key.get("keyFields");
-            String valueFields=(String)key.get("valueFields");
-        }
-    }
 }
 
 /*
