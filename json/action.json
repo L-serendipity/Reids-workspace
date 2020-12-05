@@ -1,0 +1,56 @@
+{
+  "action": [
+    {
+      "actionName": "incrNum",
+      "retrieve": [
+        {
+          "counterName": "showNum"
+        }
+      ],
+      "save": [
+        {
+          "counterName": "incrNum"
+        }
+      ]
+    },
+    {
+      "actionName": "descNum",
+      "retrieve": [
+        {
+          "counterName": "showNum"
+        }
+      ],
+      "save": [
+        {
+          "counterName": "descNum"
+        }
+      ]
+    },
+    {
+      "actionName": "incrFreqNum",
+      "retrieve": [
+        {
+          "counterName": "showFreqNum"
+        }
+      ],
+      "save": [
+        {
+          "counterName": "incrFreqNum"
+        }
+      ]
+    },
+    {
+      "actionName": "descFreqNum",
+      "retrieve": [
+        {
+          "counterName": "showFreqNum"
+        }
+      ],
+      "save": [
+        {
+          "counterName": "descFreqNum"
+        }
+      ]
+    }
+  ]
+}
